@@ -1,0 +1,59 @@
+"*":
+  "autoclose-html":
+    forceInline: [
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5"
+      "h6"
+      "p"
+      "li"
+      "option"
+      "figcaption"
+    ]
+    makeNeverCloseSelfClosing: false
+  "autocomplete-plus":
+    autoActivationDelay: 10
+    backspaceTriggersAutocomplete: true
+    enableAutoConfirmSingleSuggestion: false
+    maxVisibleSuggestions: 5
+    minimumWordLength: 3
+  core:
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "wrap-guide"
+      "welcome"
+    ]
+    packagesWithKeymapsDisabled: [
+      "one-dark-ui"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "one-dark-vivid-syntax"
+    ]
+  docblockr:
+    extra_tags_go_after: true
+  editor:
+    fontSize: 12
+    invisibles: {}
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "8fffc1cd-d681-2199-88d2-e57b97c31003"
+  "file-icons":
+    coloured: false
+    onChanges: true
+  "highlight-selected":
+    onlyHighlightWholeWords: false
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
