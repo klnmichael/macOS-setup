@@ -54,6 +54,5 @@
       "highlight-selectedDecorationsZIndex": 0
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false

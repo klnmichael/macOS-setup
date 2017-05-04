@@ -53,6 +53,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Set a blazingly fast keyboard repeat rate (default 2)
+# macOS Sierra requires value to be 1 or greater
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Set a shorter Delay until key repeat (default 15)
