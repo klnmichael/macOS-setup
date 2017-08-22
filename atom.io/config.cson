@@ -26,6 +26,15 @@
       "wrap-guide"
       "welcome"
     ]
+    ignoredNames: [
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+    ]
+    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "one-dark-ui"
     ]
@@ -34,10 +43,11 @@
       "one-dark-ui"
       "one-dark-vivid-syntax"
     ]
+    titleBar: "custom"
   docblockr:
     extra_tags_go_after: true
   editor:
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     softWrap: true
     tabLength: 4
@@ -54,6 +64,5 @@
       "highlight-selectedDecorationsZIndex": 0
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
