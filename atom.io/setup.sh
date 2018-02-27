@@ -1,11 +1,9 @@
 # Atom.io plugins
 if command -v apm &>/dev/null; then
-    apm install atom-alignment
     apm install atom-beautify
     apm install autoclose-html
     apm install color-picker
-    apm install docblockr
-    apm install file-icons
+	apm install file-icons
     apm install highlight-selected
     apm install language-babel
     apm install minimap

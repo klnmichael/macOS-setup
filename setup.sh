@@ -1,7 +1,7 @@
 #!/bin/bash
 
 p() {
-    printf "$1""\n"
+	printf "$1""\n"
 }
 
 
@@ -19,7 +19,7 @@ p
 p "Continue? (y/n)"
 read r
 if ! [[ $r =~ ^([yY])$ ]]; then
-    exit;
+	exit;
 fi
 
 
@@ -27,20 +27,6 @@ fi
 sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-
-p
-p "Would you like to set your computer name? (y/n)"
-read r
-if [[ $r =~ ^([yY])$ ]]; then
-    p "What would you like it to be?"
-    read COMPUTER_NAME
-    sudo scutil --set ComputerName $COMPUTER_NAME
-    sudo scutil --set HostName $COMPUTER_NAME
-    sudo scutil --set LocalHostName $COMPUTER_NAME
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
-    p "Your computer is now named '$COMPUTER_NAME'"
-fi
 
 
 p
@@ -80,18 +66,18 @@ p
 p "Show hidden files in Finder by default? (y/n)"
 read r
 if [[ $r =~ ^([yY])$ ]]; then
-    defaults write com.apple.Finder AppleShowAllFiles -bool true
+	defaults write com.apple.Finder AppleShowAllFiles -bool true
 elif [[ $r =~ ^([nN])$ ]]; then
-    defaults write com.apple.Finder AppleShowAllFiles -bool false
+	defaults write com.apple.Finder AppleShowAllFiles -bool false
 fi
 
 p
 p "Show dotfiles in Finder by default? (y/n)"
 read r
 if [[ $r =~ ^([yY])$ ]]; then
-    defaults write com.apple.finder AppleShowAllFiles -bool true
+	defaults write com.apple.finder AppleShowAllFiles -bool true
 elif [[ $r =~ ^([nN])$ ]]; then
-    defaults write com.apple.finder AppleShowAllFiles -bool false
+	defaults write com.apple.finder AppleShowAllFiles -bool false
 fi
 
 # Show all filename extensions in Finder by default
@@ -139,22 +125,22 @@ p
 p "Disable Dashboard? (y/n)"
 read r
 if [[ $r =~ ^([yY])$ ]]; then
-    defaults write com.apple.dashboard mcx-disabled -bool true
-    # Don’t show Dashboard as a Space
-    defaults write com.apple.dock dashboard-in-overlay -bool true
+	defaults write com.apple.dashboard mcx-disabled -bool true
+	# Don’t show Dashboard as a Space
+	defaults write com.apple.dock dashboard-in-overlay -bool true
 elif [[ $r =~ ^([nN])$ ]]; then
-    defaults write com.apple.dashboard mcx-disabled -bool false
-    # Show Dashboard as a Space
-    defaults write com.apple.dock dashboard-in-overlay -bool false
+	defaults write com.apple.dashboard mcx-disabled -bool false
+	# Show Dashboard as a Space
+	defaults write com.apple.dock dashboard-in-overlay -bool false
 fi
 
 p
 p "Automatically hide and show the Dock? (y/n)"
 read r
 if [[ $r =~ ^([yY])$ ]]; then
-    defaults write com.apple.dock autohide -bool true
+	defaults write com.apple.dock autohide -bool true
 elif [[ $r =~ ^([nN])$ ]]; then
-    defaults write com.apple.dock autohide -bool false
+	defaults write com.apple.dock autohide -bool false
 fi
 
 # Set the icon size of Dock items to 30 pixels
@@ -301,13 +287,5 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 
-###############################################################################
-# Install                                                                     #
-###############################################################################
 p
 p "Note that some of these changes require a restart to take effect!"
-p "Continue to install apps? (y/n)"
-read r
-if [[ $r =~ ^([yY])$ ]]; then
-    sh $(dirname $0)/install.sh
-fi

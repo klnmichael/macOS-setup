@@ -1,4 +1,11 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "122478da-2f11-43d1-8f9e-2616514bbf73"
+  "atom-package-deps":
+    ignored: [
+      "linter-ui-default"
+    ]
   "autoclose-html":
     forceInline: [
       "h1"
@@ -49,8 +56,11 @@
   editor:
     fontSize: 13
     invisibles: {}
+    showInvisibles: true
+    softTabs: false
     softWrap: true
     tabLength: 4
+    tabType: "hard"
   "exception-reporting":
     userId: "8fffc1cd-d681-2199-88d2-e57b97c31003"
   "file-icons":
@@ -62,6 +72,10 @@
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
+  "split-diff":
+    ignoreWhitespace: true
   "tree-view":
     hideIgnoredNames: true
   welcome:
