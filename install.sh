@@ -5,7 +5,7 @@ p() {
 }
 
 
-p "Installing Homebrew. Follow the instructions..."
+p "Installing Homebrew, a few dependencies and applications. Follow the instructions..."
 
 # Ask for the administrator password upfront
 sudo -v

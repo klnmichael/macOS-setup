@@ -5,7 +5,7 @@ source ~/.git-prompt.sh
 # git commamands simplified
 alias gst='git status'
 alias gco='git checkout'
-alias gci='git commit'
+alias gcm='git commit'
 alias grb='git rebase'
 alias gbr='git branch'
 alias gad='git add -A'
