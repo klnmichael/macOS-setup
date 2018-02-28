@@ -12,10 +12,17 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+sudo chown -R `whoami`:admin /user/local/bin
+sudo chown -R `whoami`:admin /user/local/share
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap caskroom/versions
 brew install caskroom/cask/brew-cask
+
+brew install wget
+
+brew install git
 
 brew install node
 
@@ -23,20 +30,22 @@ brew tap homebrew/php
 brew install php71
 brew install composer
 
-sudo chown -R `whoami`:admin /user/local/bin
-sudo chown -R `whoami`:admin /user/local/share
 brew install bash
+
+wget  -O ~/.git-completion.bash "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
+wget  -O ~/.git-prompt.sh "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
+
+cp .bash_profile ~/.bash_profile
+cp .bashrc ~/.bashrc
 
 # Apps
 apps=(
 	adobe-creative-cloud
 	atom
-	cyberduck
-	dropbox
 	iterm2
+	cyberduck
 	slack
 	spotify
-	google-drive-file-stream
 	google-chrome
 )
 
