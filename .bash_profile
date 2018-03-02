@@ -58,4 +58,4 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 
 # export PROMPT_COMMAND='__git_ps1 "\w" "\n\\\$ "'
 
-export PS1='\u @ \[\033[1;35m\]\w\[\033[1;92m\]$(__git_ps1)\n\[\033[0m\]└─ $ '
+export PS1='\033[1;92m\]\u \e[0m\]@ \033[1;35m\]\w \e[0m\]$(__git_ps1)\n└─ $ '
