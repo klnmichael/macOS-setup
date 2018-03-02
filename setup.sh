@@ -285,6 +285,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 # Enable transparency menu bar
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
+# Allow slow motion effects on OS High Sierra
+defaults write com.apple.dock slow-motion-allowed -bool YES
+
 
 p
 p "Note that some of these changes require a restart to take effect!"
