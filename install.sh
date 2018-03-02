@@ -40,7 +40,6 @@ cp .bashrc ~/.bashrc
 
 # Apps
 apps=(
-	adobe-creative-cloud
 	atom
 	iterm2
 	cyberduck
