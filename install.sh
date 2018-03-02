@@ -38,6 +38,8 @@ wget  -O ~/.git-prompt.sh "https://raw.githubusercontent.com/git/git/master/cont
 cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
 
+xcode-select --intall
+
 # Apps
 apps=(
 	atom
