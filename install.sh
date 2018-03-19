@@ -37,6 +37,7 @@ wget  -O ~/.git-prompt.sh "https://raw.githubusercontent.com/git/git/master/cont
 
 cp .bash_profile ~/.bash_profile
 cp .bashrc ~/.bashrc
+cp .inputrc ~/.inputrc
 
 xcode-select --intall
 
@@ -47,6 +48,9 @@ apps=(
 	cyberduck
 	slack
 	spotify
+	enpass
+	spotify
+	adobe-creative-cloud
 	google-chrome
 )
 

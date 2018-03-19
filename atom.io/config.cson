@@ -21,8 +21,8 @@
     ]
     makeNeverCloseSelfClosing: false
   "autocomplete-plus":
-    autoActivationDelay: 10
     backspaceTriggersAutocomplete: true
+    confirmCompletion: "tab"
     enableAutoConfirmSingleSuggestion: false
     maxVisibleSuggestions: 5
     minimumWordLength: 3
