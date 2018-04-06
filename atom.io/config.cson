@@ -32,6 +32,7 @@
     disabledPackages: [
       "wrap-guide"
       "welcome"
+      "whitespace"
     ]
     ignoredNames: [
       ".hg"
@@ -60,7 +61,6 @@
     softTabs: false
     softWrap: true
     tabLength: 4
-    tabType: "hard"
   "exception-reporting":
     userId: "8fffc1cd-d681-2199-88d2-e57b97c31003"
   "file-icons":
@@ -80,3 +80,6 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".editorconfig.source":
+  editor:
+    autoIndent: false
