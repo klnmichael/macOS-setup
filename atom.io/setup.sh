@@ -11,6 +11,7 @@ if command -v apm &>/dev/null; then
     apm install multi-cursor
     apm install php-twig
     apm install pigments
+    apm install editorconfig
     # theme
     apm install native-ui
     apm install one-dark-vivid-syntax
