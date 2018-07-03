@@ -46,11 +46,9 @@ apps=(
 	atom
 	iterm2
 	cyberduck
-	slack
-	spotify
 	enpass
 	spotify
-	adobe-creative-cloud
+	slack
 	google-chrome
 )
 
