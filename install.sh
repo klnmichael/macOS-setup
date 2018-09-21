@@ -29,6 +29,7 @@ brew install node
 brew tap homebrew/php
 brew install php72
 brew install composer
+brew install mysql
 
 brew install bash
 
