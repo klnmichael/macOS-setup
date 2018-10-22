@@ -35,7 +35,12 @@ p "Changing UI/UX settings... Please wait!"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Increasing sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" -int 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 48
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" -int 58
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" -int 58
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" -int 48
 
 # Set a blazingly fast keyboard repeat rate (default 2)
 # macOS Sierra requires value to be 1 or greater
