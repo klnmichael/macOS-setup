@@ -256,7 +256,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop"
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -291,6 +291,9 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Allow slow motion effects on OS High Sierra
 defaults write com.apple.dock slow-motion-allowed -bool YES
+
+# macOS Mojave subpixel rendering
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 
 p

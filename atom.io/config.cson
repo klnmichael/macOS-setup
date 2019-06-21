@@ -27,8 +27,6 @@
     maxVisibleSuggestions: 5
     minimumWordLength: 3
   core:
-    closeEmptyWindows: false
-    destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
       "welcome"
@@ -46,12 +44,12 @@
     packagesWithKeymapsDisabled: [
       "one-dark-ui"
     ]
+    projectHome: "/Users/michaelklein/Localhost"
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "one-dark-vivid-syntax"
     ]
-    titleBar: "custom"
   docblockr:
     extra_tags_go_after: true
   editor:
@@ -74,6 +72,9 @@
       "highlight-selectedDecorationsZIndex": 0
       "split-diff": true
       "split-diffDecorationsZIndex": 0
+  "native-ui":
+    ui:
+      macTransparency: false
   "split-diff":
     ignoreWhitespace: true
   "tree-view":
