@@ -17,6 +17,7 @@
       "p"
       "li"
       "option"
+      "figure"
       "figcaption"
     ]
     makeNeverCloseSelfClosing: false
