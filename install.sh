@@ -44,18 +44,20 @@ xcode-select --intall
 
 # Apps
 apps=(
-	atom
-	sublime
-	iterm2
-	cyberduck
 	enpass
-	spotify
+	1password
 	slack
 	google-chrome
 	firefox
+	iterm2
+	atom
+	sublime
 	tableplus
-	adobe-creative-cloud
+	cyberduck
 	sketch
+	adobe-creative-cloud
+	blender
+	spotify
 )
 
 # Install apps to /Applications
