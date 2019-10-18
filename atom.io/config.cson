@@ -28,6 +28,7 @@
     maxVisibleSuggestions: 5
     minimumWordLength: 3
   core:
+    closeEmptyWindows: false
     disabledPackages: [
       "wrap-guide"
       "welcome"
