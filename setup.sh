@@ -124,18 +124,18 @@ sudo chflags nohidden /Volumes
 # Dock and Dashboard                                                          #
 ###############################################################################
 
-p
-p "Disable Dashboard? (y/n)"
-read r
-if [[ $r =~ ^([yY])$ ]]; then
-	defaults write com.apple.dashboard mcx-disabled -bool true
-	# Don’t show Dashboard as a Space
-	defaults write com.apple.dock dashboard-in-overlay -bool true
-elif [[ $r =~ ^([nN])$ ]]; then
-	defaults write com.apple.dashboard mcx-disabled -bool false
-	# Show Dashboard as a Space
-	defaults write com.apple.dock dashboard-in-overlay -bool false
-fi
+# p
+# p "Disable Dashboard? (y/n)"
+# read r
+# if [[ $r =~ ^([yY])$ ]]; then
+# 	defaults write com.apple.dashboard mcx-disabled -bool true
+# 	# Don’t show Dashboard as a Space
+# 	defaults write com.apple.dock dashboard-in-overlay -bool true
+# elif [[ $r =~ ^([nN])$ ]]; then
+# 	defaults write com.apple.dashboard mcx-disabled -bool false
+# 	# Show Dashboard as a Space
+# 	defaults write com.apple.dock dashboard-in-overlay -bool false
+# fi
 
 p
 p "Automatically hide and show the Dock? (y/n)"

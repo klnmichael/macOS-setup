@@ -31,14 +31,9 @@ brew install php72
 brew install composer
 brew install mysql
 
-brew install bash
+brew install zsh
 
-wget  -O ~/.git-completion.bash "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
-wget  -O ~/.git-prompt.sh "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
-
-cp .bash_profile ~/.bash_profile
-cp .bashrc ~/.bashrc
-cp .inputrc ~/.inputrc
+cp .zshrc ~/.zshrc
 
 xcode-select --intall
 
@@ -50,11 +45,9 @@ apps=(
 	google-chrome
 	firefox
 	iterm2
-	atom
-	sublime
 	tableplus
-	cyberduck
-	sketch
+	transmit
+	figma
 	adobe-creative-cloud
 	blender
 	spotify
