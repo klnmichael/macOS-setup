@@ -140,10 +140,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Allowing text selection in Quick Look/Preview in Finder
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# Enabling snap-to-grid for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-
 # Show the ~/Library folder
 sudo chflags nohidden ~/Library
 
