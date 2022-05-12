@@ -17,17 +17,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 sudo chown -R $(whoami) $(brew --prefix)/*
 
-brew tap caskroom/versions
-brew install caskroom/cask/brew-cask
-
 brew install wget
 
 brew install git
 
 brew install node
 
-brew tap homebrew/php
-brew install php72
+brew install php
 brew install composer
 brew install mysql
 
@@ -45,6 +41,7 @@ apps=(
 	google-chrome
 	firefox
 	iterm2
+	visual-studio-code
 	tableplus
 	transmit
 	figma
@@ -55,7 +52,6 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 brew cleanup
-brew cask cleanup
