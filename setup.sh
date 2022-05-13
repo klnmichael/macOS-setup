@@ -151,6 +151,7 @@ sudo chflags nohidden /Volumes
 
 # Enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set a blazingly fast keyboard repeat rate (default 2)
