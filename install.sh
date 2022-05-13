@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$user/.zprofile
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
 brew install zsh
