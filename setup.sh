@@ -47,7 +47,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.780400 0.815700 0.8
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Allow wallpaper tinting in windows
-defaults write NSGlobalDomain AppleReduceDesktopTinting -bool false
+defaults write NSGlobalDomain AppleReduceDesktopTinting -bool true
 
 # Show scroll bars (`WhenScrolling`, `Automatic` and `Always`)
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
@@ -130,6 +130,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show Path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Use column view in all Finder windows
 defaults write com.apple.finder FXPreferredViewStyle Clmv
