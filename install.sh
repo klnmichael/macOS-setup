@@ -13,9 +13,11 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-sudo chown -R $(whoami) $(brew --prefix)/*
+cp .zshrc ~/.zshrc
+
+brew install zsh
 
 brew install wget
 
@@ -26,10 +28,6 @@ brew install node
 brew install php
 brew install composer
 brew install mysql
-
-brew install zsh
-
-cp .zshrc ~/.zshrc
 
 xcode-select --intall
 

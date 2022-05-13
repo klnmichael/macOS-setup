@@ -106,6 +106,8 @@ alias lh="ls -la"
 
 export PATH=$PATH:/usr/local/sbin
 
+export PATH=$PATH:/opt/homebrew/bin
+
 export PATH=~/.npm-global/bin:$PATH
 
 # KFC

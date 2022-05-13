@@ -43,6 +43,12 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 # Highlight Color
 defaults write NSGlobalDomain AppleHighlightColor -string "0.780400 0.815700 0.858800"
 
+# Sidebar icon size
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+# Allow wallpaper tinting in windows
+defaults write NSGlobalDomain AppleReduceDesktopTinting -bool false
+
 # Show scroll bars (`WhenScrolling`, `Automatic` and `Always`)
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
 
@@ -83,7 +89,7 @@ fi
 defaults write com.apple.dock show-process-indicators -bool true
 
 # Show recent applications in Dock
-defaults write com.apple.dock show-recents -bool true
+defaults write com.apple.dock show-recents -bool false
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
@@ -122,14 +128,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 # Show all filename extensions in Finder by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Set sidebar icon size to small
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
-
 # Show Path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
-
-# Show Status bar in Finder
-defaults write com.apple.finder ShowStatusBar -bool true
 
 # Use column view in all Finder windows
 defaults write com.apple.finder FXPreferredViewStyle Clmv
@@ -151,7 +151,6 @@ sudo chflags nohidden /Volumes
 
 # Enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set a blazingly fast keyboard repeat rate (default 2)
