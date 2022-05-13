@@ -18,8 +18,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
-brew install zsh
-
 brew install wget
 
 brew install git
@@ -30,9 +28,13 @@ brew install php
 brew install composer
 brew install mysql
 
-xcode-select --intall
+brew install zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 cp .zshrc ~/.zshrc
+
+xcode-select --intall
 
 # Apps
 apps=(
