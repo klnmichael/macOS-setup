@@ -13,19 +13,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
-xcode-select --intall
+# Install missing global dependencies
+brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman
 
 brew install git
 
 brew install wget
-
-p "Install PHP & MySQL? (y/n)"
-read r
-if [[ $r =~ ^([yY])$ ]]; then
-	brew install php
-	brew install composer
-	brew install mysql
-fi
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
@@ -35,23 +28,37 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 cp .zshrc ~/.zshrc
 
-# Apps
-apps=(
-	1password
-	slack
-	spotify
-	google-chrome
-	firefox
-	iterm2
-	visual-studio-code
-	tableplus
-	transmit
-	figma
-	blender
-)
+xcode-select --intall
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-brew install --cask --appdir="/Applications" ${apps[@]}
+p "Install PHP & MySQL? (y/n)"
+read r
+if [[ $r =~ ^([yY])$ ]]; then
+	brew install php
+	brew install composer
+	brew install mysql
+fi
+
+p "Install applications? (y/n)"
+read r
+if [[ $r =~ ^([yY])$ ]]; then
+	# Apps
+	apps=(
+		1password
+		slack
+		spotify
+		google-chrome
+		firefox
+		iterm2
+		visual-studio-code
+		tableplus
+		transmit
+		figma
+		blender
+	)
+
+	# Install apps to /Applications
+	# Default is: /Users/$user/Applications
+	brew install --cask --appdir="/Applications" ${apps[@]}
+fi
 
 brew cleanup
