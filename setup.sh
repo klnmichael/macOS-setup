@@ -35,7 +35,7 @@ p "Changing UI/UX settings... Please wait!"
 ### General
 
 # Appearance
-defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Automatic"
 
 # Accent color
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
@@ -190,17 +190,6 @@ defaults write -g NSToolbarTitleViewRolloverDelay -float 0
 
 # Allow slow motion effects
 defaults write com.apple.dock slow-motion-allowed -bool true
-
-
-### Safari
-
-# Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-
-# Enabling the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 
 # Adding a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true

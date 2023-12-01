@@ -4,11 +4,6 @@ p() {
 	printf "$1""\n"
 }
 
-
-p "Installing Homebrew, a few dependencies and applications. Follow the instructions..."
-
-
-# sudo visudo: Default !tty_tickets
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -20,15 +15,19 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 xcode-select --intall
 
-brew install wget
-
 brew install git
 
-brew install php
-brew install composer
-brew install mysql
+brew install wget
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+p "Install PHP & MySQL? (y/n)"
+read r
+if [[ $r =~ ^([yY])$ ]]; then
+	brew install php
+	brew install composer
+	brew install mysql
+fi
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 brew install zsh
 
@@ -38,7 +37,6 @@ cp .zshrc ~/.zshrc
 
 # Apps
 apps=(
-	enpass
 	1password
 	slack
 	spotify
