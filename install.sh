@@ -28,7 +28,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 cp .zshrc ~/.zshrc
 
-xcode-select --intall
+xcode-select --install
 
 p "Install PHP & MySQL? (y/n)"
 read r
