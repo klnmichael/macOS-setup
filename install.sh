@@ -13,12 +13,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
 eval $(/opt/homebrew/bin/brew shellenv)
 
-# Install missing global dependencies
-brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman
-
 brew install git
 
 brew install wget
+
+# Apple Silicon missing dependencies
+brew install cmake pkg-config cairo pango libpng jpeg giflib librsvg pixman
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
