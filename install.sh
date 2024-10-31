@@ -45,15 +45,16 @@ if [[ $r =~ ^([yY])$ ]]; then
 	apps=(
 		1password
 		slack
-		spotify
 		google-chrome
 		firefox
 		iterm2
 		visual-studio-code
+  		postman
 		tableplus
 		transmit
 		figma
 		blender
+		spotify
 	)
 
 	# Install apps to /Applications
