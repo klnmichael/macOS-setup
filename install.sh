@@ -49,7 +49,7 @@ if [[ $r =~ ^([yY])$ ]]; then
 		firefox
 		iterm2
 		visual-studio-code
-  		postman
+		postman
 		tableplus
 		transmit
 		figma
